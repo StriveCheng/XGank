@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/gan_huo"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_gan_huo" />
+    <item
+        android:id="@+id/mei_zi"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_mei_zi" />
+    <item
+        android:id="@+id/xian_du"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_xian_du" />
+    <item
+        android:id="@+id/wo_de"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_wo_de" />
+
+
+    <!--<item-->
+    <!--android:id="@+id/navigation_home"-->
+    <!--android:icon="@drawable/ic_home_black_24dp"-->
+    <!--android:title="@string/title_gan_huo" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/navigation_dashboard"-->
+    <!--android:icon="@drawable/ic_dashboard_black_24dp"-->
+    <!--android:title="@string/title_dashboard" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/navigation_notifications"-->
+    <!--android:icon="@drawable/ic_notifications_black_24dp"-->
+    <!--android:title="@string/title_notifications" />-->
+    <!---->
+
+
+</menu>

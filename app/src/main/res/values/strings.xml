@@ -3,4 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_mei_zi">妹子</string>
+    <string name="title_gan_huo">干货</string>
+    <string name="title_xian_du">闲读</string>
+    <string name="title_wo_de">我的</string>
 </resources>
