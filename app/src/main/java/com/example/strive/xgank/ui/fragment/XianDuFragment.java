@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.strive.xgank.R;
-import com.example.strive.xgank.common.Constants;
 import com.example.strive.xgank.common.api.XianDuServices;
 import com.example.strive.xgank.common.base.BaseFragment;
 import com.example.strive.xgank.common.data.FirstCategoryInfo;
+import com.example.strive.xgank.common.network.NetworkManger;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -32,8 +32,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by xingcc on 2018/8/22.
@@ -72,15 +70,12 @@ public class XianDuFragment extends BaseFragment {
     private void initView() {
         xianDuCategoryTab.setTabMode(TabLayout.MODE_SCROLLABLE);
         xianDuCategoryTab.setTabGravity(TabLayout.GRAVITY_CENTER);
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_GANK_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        XianDuServices xianDuServices = retrofit.create(XianDuServices.class);
+
+        XianDuServices xianDuServices = NetworkManger.getInstance().getRetrofit().create(XianDuServices.class);
         Call<ResponseBody> xianDu = xianDuServices.getFirstCategory ();
         xianDu.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            public void onResponse(Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
                 List<FirstCategoryInfo> categoryInfos = null;
 //
                 try {
