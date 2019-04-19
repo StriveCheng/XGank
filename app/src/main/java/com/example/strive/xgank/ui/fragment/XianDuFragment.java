@@ -70,7 +70,6 @@ public class XianDuFragment extends BaseFragment {
     private void initView() {
         xianDuCategoryTab.setTabMode(TabLayout.MODE_SCROLLABLE);
         xianDuCategoryTab.setTabGravity(TabLayout.GRAVITY_CENTER);
-
         XianDuServices xianDuServices = NetworkManger.getInstance().getRetrofit().create(XianDuServices.class);
         Call<ResponseBody> xianDu = xianDuServices.getFirstCategory ();
         xianDu.enqueue(new Callback<ResponseBody>() {
